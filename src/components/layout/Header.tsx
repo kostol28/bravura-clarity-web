@@ -21,7 +21,7 @@ const Header = () => {
         {/* Logo */}
         <NavLink to="/" className="flex items-center space-x-2">
           <img 
-            src="/src/assets/bravura-logo.svg" 
+            src="/src/assets/bravura-logo-new.jpg" 
             alt="Bravura A Data Works Company Logo" 
             className="h-28 w-auto"
           />
@@ -63,7 +63,7 @@ const Header = () => {
             <div className="flex flex-col space-y-6 mt-6">
               <NavLink to="/" className="flex items-center space-x-2" onClick={() => setIsOpen(false)}>
             <img 
-              src="/src/assets/bravura-logo.svg" 
+              src="/src/assets/bravura-logo-new.jpg" 
               alt="Bravura A Data Works Company Logo" 
               className="h-24 w-auto"
             />
