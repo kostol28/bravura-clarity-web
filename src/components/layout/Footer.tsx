@@ -10,10 +10,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex flex-col">
-              <span className="text-2xl font-bold text-foreground">Bravura A Data Works Company</span>
-              <span className="text-sm text-muted-foreground -mt-1">A Data Works Company</span>
-            </div>
+            <img 
+              src="/src/assets/bravura-logo.jpg" 
+              alt="Bravura A Data Works Company Logo" 
+              className="h-12 w-auto"
+            />
             <p className="text-sm text-muted-foreground max-w-xs">
               Transforming data into actionable insights for modern businesses. 
               Professional analytics solutions you can trust.

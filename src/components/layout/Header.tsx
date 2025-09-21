@@ -20,10 +20,11 @@ const Header = () => {
       <div className="container flex h-16 items-center justify-between px-6">
         {/* Logo */}
         <NavLink to="/" className="flex items-center space-x-2">
-          <div className="flex flex-col">
-            <span className="text-2xl font-bold text-foreground">Bravura A Data Works Company</span>
-            <span className="text-xs text-muted-foreground -mt-1">A Data Works Company</span>
-          </div>
+          <img 
+            src="/src/assets/bravura-logo.jpg" 
+            alt="Bravura A Data Works Company Logo" 
+            className="h-12 w-auto"
+          />
         </NavLink>
 
         {/* Desktop Navigation */}
@@ -61,10 +62,11 @@ const Header = () => {
           <SheetContent side="right" className="w-[300px]">
             <div className="flex flex-col space-y-6 mt-6">
               <NavLink to="/" className="flex items-center space-x-2" onClick={() => setIsOpen(false)}>
-                <div className="flex flex-col">
-                  <span className="text-xl font-bold text-foreground">Bravura A Data Works Company</span>
-                  <span className="text-xs text-muted-foreground -mt-1">A Data Works Company</span>
-                </div>
+                <img 
+                  src="/src/assets/bravura-logo.jpg" 
+                  alt="Bravura A Data Works Company Logo" 
+                  className="h-10 w-auto"
+                />
               </NavLink>
               
               <nav className="flex flex-col space-y-4">
