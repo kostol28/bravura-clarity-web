@@ -31,7 +31,7 @@ const Home = () => {
 
   const testimonials = [
     {
-      quote: "Bravura Data Works transformed how we understand our customers. Their insights drove a 35% increase in our conversion rates.",
+      quote: "Bravura A Data Works Company transformed how we understand our customers. Their insights drove a 35% increase in our conversion rates.",
       author: "Sarah Chen",
       role: "VP of Marketing",
       company: "TechFlow Inc.",
@@ -45,7 +45,7 @@ const Home = () => {
       rating: 5,
     },
     {
-      quote: "Professional, reliable, and results-oriented. Bravura Data Works exceeded our expectations in every way.",
+      quote: "Professional, reliable, and results-oriented. Bravura A Data Works Company exceeded our expectations in every way.",
       author: "Emily Johnson",
       role: "Operations Director",
       company: "Growth Ventures",
@@ -217,7 +217,7 @@ const Home = () => {
             <Badge variant="secondary" className="w-fit mx-auto">Testimonials</Badge>
             <h2 className="heading-section">What our clients say</h2>
             <p className="text-large text-muted-foreground max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what businesses like yours have to say about working with Bravura Data Works.
+              Don't just take our word for it. Here's what businesses like yours have to say about working with Bravura A Data Works Company.
             </p>
           </div>
 
@@ -254,7 +254,7 @@ const Home = () => {
           <div className="text-center space-y-8 text-primary-foreground">
             <h2 className="heading-section">Ready to transform your data?</h2>
             <p className="text-large max-w-2xl mx-auto opacity-90">
-              Join hundreds of businesses that trust Bravura Data Works to turn their data into competitive advantages.
+              Join hundreds of businesses that trust Bravura A Data Works Company to turn their data into competitive advantages.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

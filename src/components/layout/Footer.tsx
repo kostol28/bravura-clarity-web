@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-foreground">Bravura Data Works</span>
+              <span className="text-2xl font-bold text-foreground">Bravura A Data Works Company</span>
               <span className="text-sm text-muted-foreground -mt-1">A Data Works Company</span>
             </div>
             <p className="text-sm text-muted-foreground max-w-xs">
@@ -68,7 +68,7 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
           <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Bravura Data Works. All rights reserved.
+              © {currentYear} Bravura A Data Works Company. All rights reserved.
             </p>
             <div className="flex items-center space-x-1">
               <span className="text-xs text-muted-foreground">🔒</span>

@@ -64,7 +64,7 @@ const About = () => {
             </h1>
             
             <p className="text-large text-muted-foreground max-w-3xl mx-auto">
-              Founded in 2018, Bravura Data Works has been at the forefront of helping businesses 
+              Founded in 2018, Bravura A Data Works Company has been at the forefront of helping businesses 
               transform their data into competitive advantages. We combine deep technical expertise 
               with business acumen to deliver solutions that drive real results.
             </p>
