@@ -40,7 +40,7 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    /* Brand Gold System */
+    /* Brand Gold System - Using Buff */
     --gold: 29 59% 60%;
     --gold-hover: 29 59% 55%;
     --gold-light: 29 59% 70%;
@@ -104,7 +104,7 @@
   }
 
   .dark {
-    /* Dark Mode Colors */
+    /* Dark Mode Colors - Using Gunmetal as base */
     --background: 200 71% 14%;
     --foreground: 0 0% 98%;
     --card: 200 71% 16%;
@@ -121,8 +121,8 @@
     --secondary: 200 71% 14%;
     --secondary-foreground: 0 0% 98%;
     
-    /* Accent */
-    --accent: 200 50% 25%;
+    /* Accent - Midnight Green */
+    --accent: 197 65% 28%;
     --accent-foreground: 0 0% 98%;
     
     /* Neutral Tones - Dark */
