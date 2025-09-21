@@ -23,7 +23,7 @@ const Header = () => {
           <img 
             src="/src/assets/bravura-logo.jpg" 
             alt="Bravura A Data Works Company Logo" 
-            className="h-12 w-auto"
+            className="h-16 w-auto"
           />
         </NavLink>
 
@@ -65,7 +65,7 @@ const Header = () => {
                 <img 
                   src="/src/assets/bravura-logo.jpg" 
                   alt="Bravura A Data Works Company Logo" 
-                  className="h-10 w-auto"
+                  className="h-14 w-auto"
                 />
               </NavLink>
               

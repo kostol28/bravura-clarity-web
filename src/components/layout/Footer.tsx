@@ -13,7 +13,7 @@ const Footer = () => {
             <img 
               src="/src/assets/bravura-logo.jpg" 
               alt="Bravura A Data Works Company Logo" 
-              className="h-12 w-auto"
+              className="h-16 w-auto"
             />
             <p className="text-sm text-muted-foreground max-w-xs">
               Transforming data into actionable insights for modern businesses. 
