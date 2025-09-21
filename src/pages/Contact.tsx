@@ -377,6 +377,64 @@ const Contact = () => {
         </div>
       </section>
 
+      {/* Color Palette Showcase - Temporary for verification */}
+      <section className="section-padding">
+        <div className="container-enterprise">
+          <div className="text-center space-y-6 mb-16">
+            <h2 className="text-headline">Current Color Palette</h2>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-4xl mx-auto">
+              {/* Buff */}
+              <div className="space-y-2">
+                <div className="w-full h-24 rounded-lg bg-buff"></div>
+                <p className="text-sm font-medium">Buff #D6995E</p>
+              </div>
+              
+              {/* Prussian Blue */}
+              <div className="space-y-2">
+                <div className="w-full h-24 rounded-lg bg-prussian_blue"></div>
+                <p className="text-sm font-medium text-white">Prussian Blue #0C3347</p>
+              </div>
+              
+              {/* White */}
+              <div className="space-y-2">
+                <div className="w-full h-24 rounded-lg bg-white border-2 border-gray-200"></div>
+                <p className="text-sm font-medium">White #FFFFFF</p>
+              </div>
+              
+              {/* Teal Blue */}
+              <div className="space-y-2">
+                <div className="w-full h-24 rounded-lg bg-teal_blue"></div>
+                <p className="text-sm font-medium text-white">Teal Blue #195B75</p>
+              </div>
+              
+              {/* Gunmetal */}
+              <div className="space-y-2">
+                <div className="w-full h-24 rounded-lg bg-gunmetal"></div>
+                <p className="text-sm font-medium text-white">Gunmetal #0A2B3B</p>
+              </div>
+            </div>
+            
+            {/* Current Theme Usage */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
+              <div className="p-6 rounded-lg bg-primary text-primary-foreground">
+                <h3 className="font-semibold">Primary Color</h3>
+                <p className="text-sm opacity-90">Prussian Blue - Used for main actions</p>
+              </div>
+              
+              <div className="p-6 rounded-lg bg-secondary text-secondary-foreground">
+                <h3 className="font-semibold">Secondary Color</h3>
+                <p className="text-sm opacity-90">Teal Blue - Supporting elements</p>
+              </div>
+              
+              <div className="p-6 rounded-lg bg-accent text-accent-foreground">
+                <h3 className="font-semibold">Accent Color</h3>
+                <p className="text-sm">Buff - Highlights & CTAs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="section-padding surface-secondary">
         <div className="container-enterprise">
