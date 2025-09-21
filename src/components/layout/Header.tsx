@@ -17,13 +17,13 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between px-6">
+      <div className="container flex h-24 items-center justify-between px-6">
         {/* Logo */}
         <NavLink to="/" className="flex items-center space-x-2">
           <img 
-            src="/src/assets/bravura-logo.jpg" 
+            src="/src/assets/bravura-logo.svg" 
             alt="Bravura A Data Works Company Logo" 
-            className="h-16 w-auto"
+            className="h-20 w-auto"
           />
         </NavLink>
 
@@ -63,9 +63,9 @@ const Header = () => {
             <div className="flex flex-col space-y-6 mt-6">
               <NavLink to="/" className="flex items-center space-x-2" onClick={() => setIsOpen(false)}>
                 <img 
-                  src="/src/assets/bravura-logo.jpg" 
+                  src="/src/assets/bravura-logo.svg" 
                   alt="Bravura A Data Works Company Logo" 
-                  className="h-14 w-auto"
+                  className="h-16 w-auto"
                 />
               </NavLink>
               

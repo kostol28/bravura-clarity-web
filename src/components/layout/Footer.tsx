@@ -11,9 +11,9 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <img 
-              src="/src/assets/bravura-logo.jpg" 
+              src="/src/assets/bravura-logo.svg" 
               alt="Bravura A Data Works Company Logo" 
-              className="h-16 w-auto"
+              className="h-20 w-auto"
             />
             <p className="text-sm text-muted-foreground max-w-xs">
               Transforming data into actionable insights for modern businesses. 
