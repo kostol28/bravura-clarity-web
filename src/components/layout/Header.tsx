@@ -34,9 +34,9 @@ const Header = () => {
               key={link.name}
               to={link.href}
               className={({ isActive }) =>
-                `text-sm font-medium transition-colors hover:text-primary ${
-                  isActive ? "text-primary" : "text-muted-foreground"
-                }`
+                `text-sm font-medium transition-colors hover:text-accent relative ${
+                  isActive ? "text-accent" : "text-muted-foreground"
+                } ${isActive ? "after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-accent after:rounded-full" : ""}`
               }
             >
               {link.name}
@@ -46,7 +46,7 @@ const Header = () => {
 
         {/* CTA Button */}
         <div className="hidden md:flex items-center space-x-4">
-          <Button asChild>
+          <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
             <NavLink to="/contact">Get Started</NavLink>
           </Button>
         </div>
@@ -69,24 +69,24 @@ const Header = () => {
             />
               </NavLink>
               
-              <nav className="flex flex-col space-y-4">
+                <nav className="flex flex-col space-y-4">
                 {navLinks.map((link) => (
                   <NavLink
                     key={link.name}
                     to={link.href}
                     onClick={() => setIsOpen(false)}
                     className={({ isActive }) =>
-                      `text-sm font-medium transition-colors hover:text-primary px-3 py-2 rounded-md ${
-                        isActive ? "text-primary bg-accent" : "text-muted-foreground"
+                      `text-sm font-medium transition-colors hover:text-accent px-3 py-2 rounded-md ${
+                        isActive ? "text-accent bg-accent/10 border-l-2 border-accent" : "text-muted-foreground hover:bg-accent/5"
                       }`
                     }
                   >
                     {link.name}
                   </NavLink>
                 ))}
-              </nav>
+                </nav>
               
-              <Button asChild className="w-full">
+              <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
                 <NavLink to="/contact" onClick={() => setIsOpen(false)}>Get Started</NavLink>
               </Button>
             </div>

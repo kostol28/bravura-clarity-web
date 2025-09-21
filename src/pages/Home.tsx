@@ -76,13 +76,13 @@ const Home = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-              <Button size="lg" className="btn-primary">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
                 <NavLink to="/contact" className="flex items-center">
                   Start Free Consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </NavLink>
               </Button>
-              <Button variant="outline" size="lg" className="btn-outline">
+              <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
                 <NavLink to="/services">View Solutions</NavLink>
               </Button>
             </div>
@@ -108,11 +108,11 @@ const Home = () => {
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
-                <div key={index} className="card-feature">
-                  <div className="feature-icon mb-6">
-                    <Icon className="w-6 h-6 text-primary" />
+                <div key={index} className="card-feature group">
+                  <div className="feature-icon mb-6 group-hover:bg-accent/20 transition-colors duration-200">
+                    <Icon className="w-6 h-6 text-primary group-hover:text-accent transition-colors duration-200" />
                   </div>
-                  <h3 className="text-title mb-4">{feature.title}</h3>
+                  <h3 className="text-title mb-4 group-hover:text-accent transition-colors duration-200">{feature.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
                 </div>
               );
@@ -136,10 +136,11 @@ const Home = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {metrics.map((metric, index) => (
-              <div key={index} className="metric-card text-center">
-                <div className="metric-value mb-2">{metric.value}</div>
+              <div key={index} className="metric-card text-center group hover:border-accent/30 transition-all duration-200">
+                <div className="metric-value mb-2 group-hover:text-accent transition-colors duration-200">{metric.value}</div>
                 <div className="metric-label mb-3">{metric.label}</div>
                 <p className="text-sm text-muted-foreground">{metric.description}</p>
+                <div className="w-8 h-0.5 bg-accent/30 group-hover:bg-accent mx-auto mt-3 transition-all duration-200"></div>
               </div>
             ))}
           </div>
@@ -187,13 +188,13 @@ const Home = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
                 <NavLink to="/contact" className="flex items-center">
                   Schedule Consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </NavLink>
               </Button>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
+              <Button variant="outline" size="lg" className="border-white text-white hover:bg-accent hover:text-accent-foreground hover:border-accent">
                 <NavLink to="/about">Meet Our Team</NavLink>
               </Button>
             </div>
