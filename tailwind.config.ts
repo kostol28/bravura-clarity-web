@@ -69,7 +69,7 @@ export default {
           800: "hsl(200 71% 70%)",
           900: "hsl(200 71% 85%)",
         },
-        midnight_green: {
+        teal_blue: {
           DEFAULT: "hsl(197 65% 28%)",
           100: "hsl(197 65% 9%)",
           200: "hsl(197 65% 14%)",
