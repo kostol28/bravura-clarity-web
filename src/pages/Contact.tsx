@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Clock, CheckCircle, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, CheckCircle, ArrowRight, Shield, Award, Users } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -21,8 +21,8 @@ const Contact = () => {
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     toast({
-      title: "Message sent successfully!",
-      description: "We'll get back to you within 24 hours.",
+      title: "Request submitted successfully!",
+      description: "Our enterprise team will contact you within 24 hours.",
     });
     
     setIsSubmitting(false);
@@ -31,229 +31,344 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: <Mail className="h-6 w-6 text-primary" />,
-      title: "Email Us",
-      description: "Get in touch via email",
-      details: "hello@bravuradataworks.com",
+      title: "Enterprise Sales",
+      description: "Discuss your requirements",
+      details: "enterprise@bravuradataworks.com",
+      action: "Email Now"
     },
     {
       icon: <Phone className="h-6 w-6 text-primary" />,
-      title: "Call Us",
+      title: "Direct Line",
       description: "Speak with our team",
       details: "+1 (555) 123-4567",
+      action: "Call Now"
     },
     {
       icon: <MapPin className="h-6 w-6 text-primary" />,
-      title: "Visit Us",
-      description: "Our main office",
-      details: "123 Data Street, Analytics City, AC 12345",
+      title: "Headquarters",
+      description: "Visit our offices",
+      details: "123 Enterprise Blvd, Data City, DC 20001",
+      action: "Get Directions"
     },
     {
       icon: <Clock className="h-6 w-6 text-primary" />,
       title: "Business Hours",
       description: "Monday to Friday",
       details: "9:00 AM - 6:00 PM EST",
+      action: "Schedule Call"
     },
   ];
 
   const benefits = [
-    "Free 30-minute consultation",
-    "Custom solution proposal",
-    "No obligation assessment",
-    "Response within 24 hours",
+    { icon: CheckCircle, text: "Free 60-minute strategy consultation" },
+    { icon: Shield, text: "Enterprise-grade security & compliance" },
+    { icon: Award, text: "Proven ROI with 500+ successful projects" },
+    { icon: Users, text: "Dedicated account management team" }
+  ];
+
+  const faqs = [
+    {
+      question: "What's the typical project timeline?",
+      answer: "Enterprise projects typically range from 3-9 months depending on scope. We provide detailed timelines during our discovery phase with clear milestones and deliverables."
+    },
+    {
+      question: "Do you work with existing data infrastructure?",
+      answer: "Absolutely. We specialize in integrating with and enhancing existing enterprise systems including cloud platforms, on-premises solutions, and hybrid architectures."
+    },
+    {
+      question: "What industries do you serve?",
+      answer: "We serve Fortune 500 companies across financial services, healthcare, manufacturing, retail, technology, and government sectors with specialized regulatory expertise."
+    },
+    {
+      question: "How do you ensure data security?",
+      answer: "We maintain SOC 2 Type II certification, ISO 27001 compliance, and follow industry-leading security practices including encryption, access controls, and audit trails."
+    },
+    {
+      question: "What's your implementation methodology?",
+      answer: "We follow an agile, milestone-driven approach with regular stakeholder reviews, ensuring alignment with business objectives and timely delivery of measurable outcomes."
+    },
+    {
+      question: "Do you provide ongoing support?",
+      answer: "Yes, we offer comprehensive support packages including 24/7 monitoring, maintenance, optimization, and dedicated account management for enterprise clients."
+    }
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 bg-gradient-subtle">
-        <div className="container px-6">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <Badge variant="secondary" className="w-fit mx-auto">Contact Us</Badge>
+      <section className="section-padding surface-primary geometric-pattern">
+        <div className="container-enterprise">
+          <div className="max-w-5xl mx-auto text-center space-y-8">
+            <Badge variant="secondary" className="w-fit mx-auto trust-badge">Enterprise Contact</Badge>
             
-            <h1 className="heading-hero text-foreground">
-              Let's transform your data
-              <span className="bg-gradient-hero bg-clip-text text-transparent"> together</span>
+            <h1 className="text-display">
+              Ready to Transform
+              <span className="block text-primary">Your Data Strategy?</span>
             </h1>
             
-            <p className="text-large text-muted-foreground max-w-3xl mx-auto">
-              Ready to unlock the power of your data? Get in touch with our team of experts 
-              and discover how we can help drive your business forward.
+            <p className="text-body-large text-muted-foreground max-w-4xl mx-auto">
+              Connect with our enterprise data experts to discuss your specific requirements and discover 
+              how our proven solutions can drive measurable business outcomes for your organization.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-4">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-2 bg-white/50 rounded-full px-4 py-2">
-                  <CheckCircle className="h-4 w-4 text-primary" />
-                  <span className="text-sm font-medium">{benefit}</span>
-                </div>
-              ))}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
+              {benefits.map((benefit, index) => {
+                const Icon = benefit.icon;
+                return (
+                  <div key={index} className="flex flex-col items-center space-y-3 p-4 rounded-lg bg-white/50 backdrop-blur-sm">
+                    <Icon className="h-8 w-8 text-primary" />
+                    <span className="text-sm font-medium text-center">{benefit.text}</span>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-20 lg:py-32">
-        <div className="container px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section className="section-padding">
+        <div className="container-enterprise">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Form */}
-            <Card className="card-elegant">
-              <CardContent className="space-y-8">
-                <div className="space-y-4">
-                  <h2 className="heading-section">Send us a message</h2>
-                  <p className="text-muted-foreground">
-                    Fill out the form below and we'll get back to you as soon as possible.
-                  </p>
-                </div>
+            <div className="lg:col-span-2">
+              <Card className="card-elevated">
+                <CardContent className="space-y-8 p-8">
+                  <div className="space-y-4">
+                    <h2 className="text-title">Enterprise Inquiry</h2>
+                    <p className="text-muted-foreground">
+                      Complete the form below and our enterprise team will contact you within 24 hours 
+                      to discuss your data transformation requirements.
+                    </p>
+                  </div>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="firstName">First Name *</Label>
+                        <Input
+                          id="firstName"
+                          name="firstName"
+                          placeholder="John"
+                          required
+                          className="w-full"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="lastName">Last Name *</Label>
+                        <Input
+                          id="lastName"
+                          name="lastName"
+                          placeholder="Doe"
+                          required
+                          className="w-full"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="email">Business Email *</Label>
+                        <Input
+                          id="email"
+                          name="email"
+                          type="email"
+                          placeholder="john.doe@company.com"
+                          required
+                          className="w-full"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="phone">Phone Number</Label>
+                        <Input
+                          id="phone"
+                          name="phone"
+                          type="tel"
+                          placeholder="+1 (555) 123-4567"
+                          className="w-full"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="company">Company Name *</Label>
+                        <Input
+                          id="company"
+                          name="company"
+                          placeholder="Enterprise Corp"
+                          required
+                          className="w-full"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="title">Job Title *</Label>
+                        <Input
+                          id="title"
+                          name="title"
+                          placeholder="Chief Data Officer"
+                          required
+                          className="w-full"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="industry">Industry</Label>
+                        <Select>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select your industry" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="financial">Financial Services</SelectItem>
+                            <SelectItem value="healthcare">Healthcare & Life Sciences</SelectItem>
+                            <SelectItem value="retail">Retail & E-commerce</SelectItem>
+                            <SelectItem value="manufacturing">Manufacturing</SelectItem>
+                            <SelectItem value="technology">Technology</SelectItem>
+                            <SelectItem value="energy">Energy & Utilities</SelectItem>
+                            <SelectItem value="media">Media & Entertainment</SelectItem>
+                            <SelectItem value="government">Government & Public Sector</SelectItem>
+                            <SelectItem value="other">Other</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="company-size">Company Size</Label>
+                        <Select>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Number of employees" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="startup">1-50 employees</SelectItem>
+                            <SelectItem value="small">51-200 employees</SelectItem>
+                            <SelectItem value="medium">201-1,000 employees</SelectItem>
+                            <SelectItem value="large">1,001-10,000 employees</SelectItem>
+                            <SelectItem value="enterprise">10,000+ employees</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                    </div>
+
                     <div className="space-y-2">
-                      <Label htmlFor="firstName">First Name *</Label>
-                      <Input
-                        id="firstName"
-                        name="firstName"
-                        placeholder="John"
+                      <Label htmlFor="service">Primary Interest</Label>
+                      <Select>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select primary service interest" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="analytics">Advanced Analytics & BI</SelectItem>
+                          <SelectItem value="engineering">Data Engineering & Architecture</SelectItem>
+                          <SelectItem value="ai-ml">AI & Machine Learning</SelectItem>
+                          <SelectItem value="realtime">Real-time Data Processing</SelectItem>
+                          <SelectItem value="governance">Data Governance & Security</SelectItem>
+                          <SelectItem value="consulting">Data Strategy Consulting</SelectItem>
+                          <SelectItem value="multiple">Multiple Services</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="budget">Project Budget Range</Label>
+                      <Select>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select budget range" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="100k-250k">$100k - $250k</SelectItem>
+                          <SelectItem value="250k-500k">$250k - $500k</SelectItem>
+                          <SelectItem value="500k-1m">$500k - $1M</SelectItem>
+                          <SelectItem value="1m-5m">$1M - $5M</SelectItem>
+                          <SelectItem value="5m+">$5M+</SelectItem>
+                          <SelectItem value="discuss">Let's Discuss</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="timeline">Desired Timeline</Label>
+                      <Select>
+                        <SelectTrigger>
+                          <SelectValue placeholder="When do you want to start?" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="immediate">Immediately</SelectItem>
+                          <SelectItem value="1-3months">1-3 months</SelectItem>
+                          <SelectItem value="3-6months">3-6 months</SelectItem>
+                          <SelectItem value="6-12months">6-12 months</SelectItem>
+                          <SelectItem value="planning">Still planning</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="message">Project Details *</Label>
+                      <Textarea
+                        id="message"
+                        name="message"
+                        placeholder="Please describe your data challenges, current infrastructure, and business objectives..."
+                        rows={5}
                         required
-                        className="w-full"
+                        className="w-full resize-none"
                       />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="lastName">Last Name *</Label>
-                      <Input
-                        id="lastName"
-                        name="lastName"
-                        placeholder="Doe"
-                        required
-                        className="w-full"
-                      />
-                    </div>
-                  </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email Address *</Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="john@company.com"
-                      required
-                      className="w-full"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="company">Company</Label>
-                    <Input
-                      id="company"
-                      name="company"
-                      placeholder="Your Company Name"
-                      className="w-full"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="service">Service Interest</Label>
-                    <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select a service" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="analytics">Data Analytics & Insights</SelectItem>
-                        <SelectItem value="integration">Data Integration & Management</SelectItem>
-                        <SelectItem value="ml">Predictive Analytics & ML</SelectItem>
-                        <SelectItem value="realtime">Real-Time Data Processing</SelectItem>
-                        <SelectItem value="bi">Business Intelligence Solutions</SelectItem>
-                        <SelectItem value="governance">Data Governance & Security</SelectItem>
-                        <SelectItem value="consultation">General Consultation</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="budget">Project Budget</Label>
-                    <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select budget range" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="under-10k">Under $10,000</SelectItem>
-                        <SelectItem value="10k-25k">$10,000 - $25,000</SelectItem>
-                        <SelectItem value="25k-50k">$25,000 - $50,000</SelectItem>
-                        <SelectItem value="50k-100k">$50,000 - $100,000</SelectItem>
-                        <SelectItem value="over-100k">Over $100,000</SelectItem>
-                        <SelectItem value="discuss">Let's discuss</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message *</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      placeholder="Tell us about your data challenges and goals..."
-                      rows={5}
-                      required
-                      className="w-full resize-none"
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full btn-hero"
-                  >
-                    {isSubmitting ? "Sending..." : "Send Message"}
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+                    <Button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full btn-primary"
+                      size="lg"
+                    >
+                      {isSubmitting ? "Submitting..." : "Submit Enterprise Inquiry"}
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
+            </div>
 
             {/* Contact Information */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <h2 className="heading-section">Get in touch</h2>
+                <h2 className="text-title">Get in Touch</h2>
                 <p className="text-muted-foreground">
-                  We're here to help you succeed. Choose the way that works best for you to connect with our team.
+                  Multiple ways to connect with our enterprise team. Choose what works best for your organization.
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+              <div className="space-y-4">
                 {contactInfo.map((info, index) => (
-                  <Card key={index} className="card-elegant hover:border-primary/20">
-                    <CardContent className="space-y-4">
-                      <div className="flex items-center space-x-4">
-                        <div className="p-3 bg-primary/10 rounded-xl">
+                  <Card key={index} className="card-interactive">
+                    <CardContent className="space-y-4 p-6">
+                      <div className="flex items-start space-x-4">
+                        <div className="feature-icon flex-shrink-0">
                           {info.icon}
                         </div>
-                        <div>
-                          <h3 className="font-semibold">{info.title}</h3>
-                          <p className="text-sm text-muted-foreground">{info.description}</p>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="font-semibold text-sm">{info.title}</h3>
+                          <p className="text-xs text-muted-foreground mb-2">{info.description}</p>
+                          <p className="font-medium text-primary text-sm">{info.details}</p>
                         </div>
-                      </div>
-                      <div className="pl-16">
-                        <p className="font-medium text-primary">{info.details}</p>
                       </div>
                     </CardContent>
                   </Card>
                 ))}
               </div>
 
-              {/* Additional CTA */}
-              <Card className="card-elegant bg-gradient-hero text-primary-foreground">
-                <CardContent className="space-y-6">
+              {/* Priority Support CTA */}
+              <Card className="card-elevated surface-overlay text-primary-foreground">
+                <CardContent className="space-y-6 p-8">
                   <div className="space-y-4">
-                    <h3 className="text-xl font-semibold">Prefer to talk first?</h3>
-                    <p className="opacity-90">
-                      Schedule a free 30-minute consultation to discuss your data needs and explore how we can help.
+                    <h3 className="text-title">Priority Support</h3>
+                    <p className="opacity-90 text-sm">
+                      Need immediate assistance? Our enterprise support team is available 24/7 
+                      for urgent inquiries and critical system issues.
                     </p>
                   </div>
                   
-                  <Button variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                    Schedule a Call
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                  <Button className="w-full bg-white text-primary hover:bg-white/90">
+                    Contact Priority Support
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>
               </Card>
@@ -263,37 +378,21 @@ const Contact = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 lg:py-32 bg-secondary/30">
-        <div className="container px-6">
+      <section className="section-padding surface-secondary">
+        <div className="container-enterprise">
           <div className="text-center space-y-6 mb-16">
-            <Badge variant="secondary" className="w-fit mx-auto">FAQ</Badge>
-            <h2 className="heading-section">Frequently asked questions</h2>
-            <p className="text-large text-muted-foreground max-w-3xl mx-auto">
-              Have questions? We've got answers. Here are some of the most common questions we receive.
+            <Badge variant="secondary" className="w-fit mx-auto">Enterprise FAQ</Badge>
+            <h2 className="text-headline">Frequently Asked Questions</h2>
+            <p className="text-body-large text-muted-foreground max-w-3xl mx-auto">
+              Common questions from enterprise clients about our data solutions, implementation process, 
+              and partnership approach.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {[
-              {
-                question: "How long does a typical project take?",
-                answer: "Project timelines vary based on scope and complexity. Most projects range from 4-12 weeks, with ongoing support available."
-              },
-              {
-                question: "Do you work with small businesses?",
-                answer: "Absolutely! We work with businesses of all sizes, from startups to enterprise organizations."
-              },
-              {
-                question: "What if I don't have clean data?",
-                answer: "Don't worry! Data cleaning and preparation is part of our process. We'll help you get your data ready for analysis."
-              },
-              {
-                question: "Can you integrate with our existing systems?",
-                answer: "Yes, we specialize in integrating with existing business systems and can work with virtually any data source."
-              }
-            ].map((faq, index) => (
-              <Card key={index} className="card-elegant">
-                <CardContent className="space-y-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {faqs.map((faq, index) => (
+              <Card key={index} className="card-primary">
+                <CardContent className="space-y-4 p-8">
                   <h3 className="font-semibold text-lg">{faq.question}</h3>
                   <p className="text-muted-foreground">{faq.answer}</p>
                 </CardContent>

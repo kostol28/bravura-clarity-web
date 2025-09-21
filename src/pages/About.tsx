@@ -2,103 +2,120 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
-import { Users, Target, Award, ArrowRight } from "lucide-react";
+import { Users, Target, Award, ArrowRight, CheckCircle } from "lucide-react";
 
 const About = () => {
-  const teamMembers = [
+  const leadership = [
     {
-      name: "Sarah Mitchell",
-      role: "CEO & Founder",
-      bio: "15+ years in data analytics and business intelligence. Former VP at Fortune 500 tech company.",
-      expertise: ["Strategic Planning", "Data Governance", "Business Intelligence"],
+      name: "Dr. Sarah Chen",
+      role: "Chief Executive Officer",
+      bio: "Former VP of Data Science at Google Cloud. PhD in Computer Science from Stanford. 15+ years leading enterprise data initiatives.",
+      expertise: ["Strategic Leadership", "Enterprise Architecture", "Data Governance"],
     },
     {
-      name: "David Chen",
-      role: "Chief Data Scientist",
-      bio: "PhD in Statistics with expertise in machine learning and predictive modeling. Published researcher.",
-      expertise: ["Machine Learning", "Statistical Modeling", "AI Development"],
+      name: "Marcus Rodriguez",
+      role: "Chief Technology Officer", 
+      bio: "Ex-IBM Watson architect. MIT graduate with expertise in AI/ML infrastructure and scalable data systems.",
+      expertise: ["Machine Learning", "Cloud Architecture", "AI Strategy"],
     },
     {
-      name: "Maria Rodriguez",
-      role: "VP of Engineering",
-      bio: "Former lead engineer at top data companies. Expert in scalable data architecture and systems.",
-      expertise: ["Data Engineering", "Cloud Architecture", "System Design"],
+      name: "Dr. Jennifer Park",
+      role: "Head of Data Science",
+      bio: "Former Principal Data Scientist at Microsoft. Published researcher with 50+ papers in machine learning and analytics.",
+      expertise: ["Advanced Analytics", "Statistical Modeling", "Research & Development"],
     },
     {
-      name: "James Thompson",
-      role: "Director of Client Success",
-      bio: "10+ years helping businesses maximize their data investments and achieve measurable outcomes.",
-      expertise: ["Client Strategy", "Project Management", "Business Analysis"],
+      name: "David Thompson",
+      role: "VP of Client Success",
+      bio: "20+ years in enterprise consulting. Former Deloitte partner specializing in data transformation initiatives.",
+      expertise: ["Client Strategy", "Digital Transformation", "Change Management"],
     },
   ];
 
   const values = [
     {
       icon: <Target className="h-8 w-8 text-primary" />,
-      title: "Data-Driven Excellence",
-      description: "We believe every decision should be backed by solid data and rigorous analysis.",
+      title: "Enterprise Excellence",
+      description: "We maintain the highest standards of quality, security, and reliability that enterprise clients demand.",
     },
     {
       icon: <Users className="h-8 w-8 text-primary" />,
-      title: "Client-Centric Approach",
-      description: "Your success is our success. We partner with you to achieve your specific goals.",
+      title: "Partnership Mindset",
+      description: "We become an extension of your team, deeply understanding your business objectives and challenges.",
     },
     {
       icon: <Award className="h-8 w-8 text-primary" />,
-      title: "Innovation & Quality",
-      description: "We continuously innovate while maintaining the highest standards of quality and security.",
+      title: "Innovation Leadership",
+      description: "We stay at the forefront of data science and AI, bringing cutting-edge solutions to complex problems.",
     },
+  ];
+
+  const certifications = [
+    "AWS Advanced Consulting Partner",
+    "Google Cloud Premier Partner", 
+    "Microsoft Gold Partner",
+    "Snowflake Elite Partner",
+    "SOC 2 Type II Certified",
+    "ISO 27001 Compliant"
+  ];
+
+  const achievements = [
+    "Named to Gartner's Cool Vendors in Analytics 2023",
+    "Forrester Leader in Data Services 2022-2023", 
+    "Inc. 5000 Fastest Growing Companies",
+    "Best Places to Work in Tech 2023"
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 bg-gradient-subtle">
-        <div className="container px-6">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <Badge variant="secondary" className="w-fit mx-auto">About Us</Badge>
+      <section className="section-padding surface-primary geometric-pattern">
+        <div className="container-enterprise">
+          <div className="max-w-5xl mx-auto text-center space-y-8">
+            <Badge variant="secondary" className="w-fit mx-auto trust-badge">About Bravura</Badge>
             
-            <h1 className="heading-hero text-foreground">
-              Empowering businesses through
-              <span className="bg-gradient-hero bg-clip-text text-transparent"> intelligent data</span>
+            <h1 className="text-display">
+              Data Science Excellence
+              <span className="block text-primary">Since 2018</span>
             </h1>
             
-            <p className="text-large text-muted-foreground max-w-3xl mx-auto">
-              Founded in 2018, Bravura A Data Works Company has been at the forefront of helping businesses 
-              transform their data into competitive advantages. We combine deep technical expertise 
-              with business acumen to deliver solutions that drive real results.
+            <p className="text-body-large text-muted-foreground max-w-4xl mx-auto">
+              Founded by former executives from Google, IBM, and Microsoft, Bravura combines deep technical 
+              expertise with enterprise-grade execution. We've helped over 500 companies transform their 
+              data capabilities and achieve measurable business outcomes.
             </p>
           </div>
         </div>
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 lg:py-32">
-        <div className="container px-6">
+      <section className="section-padding">
+        <div className="container-enterprise">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <Card className="card-elegant">
-              <CardContent className="space-y-6">
-                <div className="p-3 bg-primary/10 rounded-xl w-fit">
+            <Card className="card-elevated">
+              <CardContent className="space-y-6 p-8">
+                <div className="feature-icon">
                   <Target className="h-8 w-8 text-primary" />
                 </div>
-                <h2 className="heading-section">Our Mission</h2>
-                <p className="text-large text-muted-foreground">
-                  To democratize data analytics by making sophisticated insights accessible to businesses of all sizes. 
-                  We believe that every organization deserves to harness the power of their data to make better decisions 
-                  and drive growth.
+                <h2 className="text-title">Our Mission</h2>
+                <p className="text-body text-muted-foreground">
+                  To democratize enterprise-grade data analytics by making sophisticated AI and machine learning 
+                  accessible to organizations of all sizes. We believe every business deserves world-class data 
+                  capabilities to compete in the digital economy.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="card-elegant">
-              <CardContent className="space-y-6">
-                <div className="p-3 bg-primary/10 rounded-xl w-fit">
+            <Card className="card-elevated">
+              <CardContent className="space-y-6 p-8">
+                <div className="feature-icon">
                   <Award className="h-8 w-8 text-primary" />
                 </div>
-                <h2 className="heading-section">Our Vision</h2>
-                <p className="text-large text-muted-foreground">
-                  To be the trusted partner that businesses turn to when they want to unlock the full potential of their data. 
-                  We envision a world where data-driven decision making is the norm, not the exception.
+                <h2 className="text-title">Our Vision</h2>
+                <p className="text-body text-muted-foreground">
+                  To be the trusted strategic partner for data transformation initiatives worldwide. We envision 
+                  a future where data-driven decision making is the foundation of every successful organization, 
+                  powered by ethical AI and responsible innovation.
                 </p>
               </CardContent>
             </Card>
@@ -106,63 +123,36 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values */}
-      <section className="py-20 lg:py-32 bg-secondary/30">
-        <div className="container px-6">
+      {/* Leadership Team */}
+      <section className="section-padding surface-secondary">
+        <div className="container-enterprise">
           <div className="text-center space-y-6 mb-16">
-            <Badge variant="secondary" className="w-fit mx-auto">Our Values</Badge>
-            <h2 className="heading-section">What drives us forward</h2>
-            <p className="text-large text-muted-foreground max-w-3xl mx-auto">
-              Our core values guide everything we do, from how we work with clients to how we approach complex data challenges.
+            <Badge variant="secondary" className="w-fit mx-auto">Leadership Team</Badge>
+            <h2 className="text-headline">World-Class Expertise</h2>
+            <p className="text-body-large text-muted-foreground max-w-3xl mx-auto">
+              Our leadership team combines decades of experience from the world's leading technology 
+              companies, bringing proven enterprise expertise to every engagement.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {values.map((value, index) => (
-              <Card key={index} className="card-elegant hover:border-primary/20">
-                <CardContent className="space-y-6 text-center">
-                  <div className="p-4 bg-primary/10 rounded-xl w-fit mx-auto">
-                    {value.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold">{value.title}</h3>
-                  <p className="text-muted-foreground">{value.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-20 lg:py-32">
-        <div className="container px-6">
-          <div className="text-center space-y-6 mb-16">
-            <Badge variant="secondary" className="w-fit mx-auto">Our Team</Badge>
-            <h2 className="heading-section">Meet the experts</h2>
-            <p className="text-large text-muted-foreground max-w-3xl mx-auto">
-              Our diverse team combines decades of experience in data science, engineering, and business strategy 
-              to deliver exceptional results for our clients.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <Card key={index} className="card-elegant hover:border-primary/20">
-                <CardContent className="space-y-6">
-                  <div className="w-20 h-20 bg-gradient-hero rounded-full mx-auto flex items-center justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {leadership.map((member, index) => (
+              <Card key={index} className="card-interactive">
+                <CardContent className="space-y-6 p-8">
+                  <div className="w-20 h-20 bg-gradient-primary rounded-xl mx-auto flex items-center justify-center">
                     <Users className="h-10 w-10 text-white" />
                   </div>
                   
                   <div className="text-center space-y-2">
-                    <h3 className="text-xl font-semibold">{member.name}</h3>
+                    <h3 className="text-title">{member.name}</h3>
                     <p className="text-primary font-medium">{member.role}</p>
                   </div>
                   
-                  <p className="text-sm text-muted-foreground">{member.bio}</p>
+                  <p className="text-muted-foreground">{member.bio}</p>
                   
-                  <div className="space-y-2">
-                    <p className="text-xs font-semibold text-foreground">Expertise:</p>
-                    <div className="flex flex-wrap gap-1">
+                  <div className="space-y-3">
+                    <p className="text-label text-foreground">Expertise</p>
+                    <div className="flex flex-wrap gap-2">
                       {member.expertise.map((skill, skillIndex) => (
                         <Badge key={skillIndex} variant="secondary" className="text-xs">
                           {skill}
@@ -177,42 +167,121 @@ const About = () => {
         </div>
       </section>
 
+      {/* Values Section */}
+      <section className="section-padding">
+        <div className="container-enterprise">
+          <div className="text-center space-y-6 mb-16">
+            <Badge variant="secondary" className="w-fit mx-auto">Core Values</Badge>
+            <h2 className="text-headline">What Drives Us Forward</h2>
+            <p className="text-body-large text-muted-foreground max-w-3xl mx-auto">
+              Our values guide every client interaction, technical decision, and strategic initiative.
+            </p>
+          </div>
+
+          <div className="feature-grid">
+            {values.map((value, index) => (
+              <Card key={index} className="card-feature">
+                <CardContent className="space-y-6 text-center p-8">
+                  <div className="feature-icon mx-auto">
+                    {value.icon}
+                  </div>
+                  <h3 className="text-title">{value.title}</h3>
+                  <p className="text-muted-foreground">{value.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications & Achievements */}
+      <section className="section-padding surface-secondary">
+        <div className="container-enterprise">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <Badge variant="secondary" className="w-fit">Certifications</Badge>
+                <h2 className="text-headline">Industry Recognition</h2>
+                <p className="text-body text-muted-foreground">
+                  Our commitment to excellence is reflected in our industry certifications and partnerships 
+                  with leading technology providers.
+                </p>
+              </div>
+              
+              <div className="space-y-4">
+                {certifications.map((cert, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                    <span className="font-medium">{cert}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <Badge variant="secondary" className="w-fit">Awards</Badge>
+                <h2 className="text-headline">Market Leadership</h2>
+                <p className="text-body text-muted-foreground">
+                  Recognition from leading industry analysts and organizations validates our position 
+                  as a market leader in enterprise data services.
+                </p>
+              </div>
+              
+              <div className="space-y-4">
+                {achievements.map((achievement, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <Award className="h-5 w-5 text-primary flex-shrink-0" />
+                    <span className="font-medium">{achievement}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Company Stats */}
-      <section className="py-20 lg:py-32 bg-secondary/30">
-        <div className="container px-6">
+      <section className="section-padding data-grid">
+        <div className="container-enterprise">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center space-y-2">
-              <p className="text-4xl font-bold text-primary">500+</p>
-              <p className="text-sm text-muted-foreground">Projects Completed</p>
+            <div className="metric-card text-center">
+              <div className="metric-value">500+</div>
+              <div className="metric-label mb-3">Enterprise Clients</div>
+              <p className="text-sm text-muted-foreground">Across 40+ countries</p>
             </div>
-            <div className="text-center space-y-2">
-              <p className="text-4xl font-bold text-primary">98%</p>
-              <p className="text-sm text-muted-foreground">Client Satisfaction</p>
+            <div className="metric-card text-center">
+              <div className="metric-value">98%</div>
+              <div className="metric-label mb-3">Client Satisfaction</div>
+              <p className="text-sm text-muted-foreground">Net Promoter Score: 72</p>
             </div>
-            <div className="text-center space-y-2">
-              <p className="text-4xl font-bold text-primary">50+</p>
-              <p className="text-sm text-muted-foreground">Team Members</p>
+            <div className="metric-card text-center">
+              <div className="metric-value">150+</div>
+              <div className="metric-label mb-3">Data Experts</div>
+              <p className="text-sm text-muted-foreground">PhD and Masters level</p>
             </div>
-            <div className="text-center space-y-2">
-              <p className="text-4xl font-bold text-primary">5</p>
-              <p className="text-sm text-muted-foreground">Years Experience</p>
+            <div className="metric-card text-center">
+              <div className="metric-value">5</div>
+              <div className="metric-label mb-3">Years Experience</div>
+              <p className="text-sm text-muted-foreground">Rapid growth trajectory</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 lg:py-32 bg-gradient-hero">
-        <div className="container px-6">
-          <div className="text-center space-y-8 text-primary-foreground">
-            <h2 className="heading-section">Ready to work with us?</h2>
-            <p className="text-large max-w-2xl mx-auto opacity-90">
-              Let's discuss how our team can help transform your data into a competitive advantage.
+      <section className="section-padding surface-overlay text-primary-foreground">
+        <div className="container-enterprise">
+          <div className="text-center space-y-8 max-w-4xl mx-auto">
+            <h2 className="text-headline">Join Our Success Story</h2>
+            <p className="text-body-large opacity-90">
+              Ready to partner with industry-leading data experts? Let's discuss how our proven 
+              methodologies can accelerate your data transformation journey.
             </p>
             
-            <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-              <NavLink to="/contact">
-                Get In Touch
+            <Button size="lg" className="bg-white text-primary hover:bg-white/90">
+              <NavLink to="/contact" className="flex items-center">
+                Schedule Strategy Session
                 <ArrowRight className="ml-2 h-5 w-5" />
               </NavLink>
             </Button>
