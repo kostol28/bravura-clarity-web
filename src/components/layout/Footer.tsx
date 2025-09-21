@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <img 
-              src="/src/assets/bravura-logo-new.jpg" 
+              src="/src/assets/bravura-logo-clean.svg" 
               alt="Bravura A Data Works Company Logo" 
               className="h-20 w-auto"
             />
