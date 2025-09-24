@@ -7,48 +7,54 @@
    All colors MUST be HSL for consistency */
 
 @layer base {
-  :root {
-    /* Core Colors - Enterprise Palette */
-    --background: 0 0% 100%;
-    --foreground: 200 71% 16%;
-    --card: 0 0% 100%;
-    --card-foreground: 200 71% 16%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 200 71% 16%;
+:root {
+  /* Apple-inspired Color Palette - HSL values */
+  --background: 0 0% 100%;
+  --foreground: 0 0% 9%;
+  
+  /* Primary Colors - Refined Blues */
+  --primary: 215 50% 20%;
+  --primary-foreground: 0 0% 100%;
+  --primary-muted: 215 15% 90%;
+  --primary-hover: 215 50% 25%;
+  
+  /* Secondary Colors - Light Neutrals */
+  --secondary: 0 0% 96%;
+  --secondary-foreground: 0 0% 20%;
+  
+  /* Accent Colors - Subtle Teal */
+  --accent: 180 35% 40%;
+  --accent-foreground: 0 0% 100%;
+  --accent-muted: 180 15% 92%;
+  
+  /* Neutral Colors - Clean Grays */
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 45%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 9%;
+  
+  /* UI Colors - Minimal */
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 9%;
+  --border: 0 0% 92%;
+  --input: 0 0% 92%;
+  --ring: 215 50% 20%;
+  
+  /* Status Colors */
+  --destructive: 0 65% 50%;
+  --destructive-foreground: 0 0% 100%;
+  
+  /* Custom Brand Colors - Subdued */
+  --gold: 45 70% 50%;
+  --buff: 40 35% 88%;
+  --prussian_blue: 215 70% 20%;
+  --teal_blue: 195 50% 40%;
+  --gunmetal: 210 10% 20%;
     
-    /* Primary - Prussian Blue (#0C3347) */
-    --primary: 200 71% 16%;
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 197 65% 28%;
-    
-    /* Secondary - Teal Blue (#195B75) */
-    --secondary: 197 65% 28%;
-    --secondary-foreground: 0 0% 100%;
-    
-    /* Accent - Buff (#D6995E) */
-    --accent: 29 59% 60%;
-    --accent-foreground: 200 71% 16%;
-    
-    /* Neutral System */
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 200 71% 16%;
-    
-    /* Semantic Colors */
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-    
-    /* Brand Gold System - Using Buff */
-    --gold: 29 59% 60%;
-    --gold-hover: 29 59% 55%;
-    --gold-light: 29 59% 70%;
-    
-    /* Design Tokens */
-    --radius: 8px;
-    --radius-lg: 12px;
-    --radius-xl: 16px;
+    /* Design Tokens - Apple-inspired spacing */
+    --radius: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.25rem;
     
     /* Enterprise Spacing Scale */
     --spacing-xs: 0.25rem;
@@ -73,31 +79,35 @@
 
     /* Sidebar System */
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 200 71% 16%;
-    --sidebar-primary: 200 71% 16%;
+    --sidebar-foreground: 0 0% 9%;
+    --sidebar-primary: 215 50% 20%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 14% 96%;
-    --sidebar-accent-foreground: 200 71% 16%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 200 71% 16%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 9%;
+    --sidebar-border: 0 0% 92%;
+    --sidebar-ring: 215 50% 20%;
 
-    /* Enterprise Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(200 71% 16%), hsl(197 65% 28%));
-    --gradient-surface: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 14% 98%));
-    --gradient-accent: linear-gradient(135deg, hsl(29 59% 60%), hsl(29 59% 70%));
-    --gradient-overlay: linear-gradient(135deg, hsl(200 71% 16% / 0.95), hsl(197 65% 28% / 0.9));
+    /* Apple-inspired Gradients */
+    --gradient-primary: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(220 20% 97%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--teal_blue)) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(220 20% 97%) 100%);
+    --gradient-overlay: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--prussian_blue)) 100%);
+    --gradient-glass: linear-gradient(145deg, hsl(var(--background) / 0.8) 0%, hsl(var(--muted) / 0.6) 100%);
 
-    /* Professional Shadow System */
-    --shadow-xs: 0 1px 2px 0 hsl(200 71% 16% / 0.05);
-    --shadow-sm: 0 1px 3px 0 hsl(200 71% 16% / 0.1), 0 1px 2px -1px hsl(200 71% 16% / 0.1);
-    --shadow-md: 0 4px 6px -1px hsl(200 71% 16% / 0.1), 0 2px 4px -2px hsl(200 71% 16% / 0.1);
-    --shadow-lg: 0 10px 15px -3px hsl(200 71% 16% / 0.1), 0 4px 6px -4px hsl(200 71% 16% / 0.1);
-    --shadow-xl: 0 20px 25px -5px hsl(200 71% 16% / 0.1), 0 8px 10px -6px hsl(200 71% 16% / 0.1);
-    --shadow-2xl: 0 25px 50px -12px hsl(200 71% 16% / 0.25);
+    /* Professional Shadow System - Soft and refined */
+    --shadow-xs: 0 1px 3px 0 hsl(0 0% 0% / 0.08);
+    --shadow-sm: 0 4px 12px -2px hsl(0 0% 0% / 0.08);
+    --shadow-md: 0 8px 24px -4px hsl(0 0% 0% / 0.08);
+    --shadow-lg: 0 16px 48px -8px hsl(0 0% 0% / 0.08);
+    --shadow-xl: 0 24px 64px -12px hsl(0 0% 0% / 0.08);
+    --shadow-2xl: 0 32px 80px -16px hsl(0 0% 0% / 0.12);
+    --shadow-glow: 0 0 40px hsl(var(--accent) / 0.15);
+    --shadow-button: 0 2px 8px -2px hsl(0 0% 0% / 0.1), 0 0 0 1px hsl(0 0% 0% / 0.05);
     
-    /* Animation System */
-    --ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
-    --ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1);
+    /* Animation System - Smooth micro-interactions */
+    --ease-out-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-in-out-cubic: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --transition-fast: 150ms var(--ease-out-cubic);
     --transition-base: 200ms var(--ease-out-cubic);
     --transition-slow: 300ms var(--ease-in-out-cubic);
@@ -217,79 +227,75 @@
     @apply text-xs text-muted-foreground;
   }
 
-  /* Enterprise Button System */
+  /* Apple-inspired Button System */
   .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary-hover
-           px-6 py-3 rounded-lg font-medium
+    @apply bg-primary text-primary-foreground hover:bg-primary/90
+           px-8 py-3 rounded-full font-normal
            transition-all duration-200 ease-out
-           shadow-sm hover:shadow-md
+           shadow-sm hover:shadow-md hover:scale-[1.02]
            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2
            active:scale-95 border border-transparent;
   }
 
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90
-           px-6 py-3 rounded-lg font-medium
+    @apply bg-gradient-to-b from-white to-gray-50 text-gray-900 hover:from-gray-50 hover:to-gray-100
+           border border-gray-200 px-8 py-3 rounded-full font-normal
            transition-all duration-200 ease-out
-           shadow-sm hover:shadow-md
+           shadow-sm hover:shadow-md hover:scale-[1.02]
            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2
-           active:scale-95 border border-transparent;
+           active:scale-95;
   }
 
   .btn-outline {
-    @apply border border-primary bg-background text-primary
-           hover:bg-primary hover:text-primary-foreground
-           px-6 py-3 rounded-lg font-medium
+    @apply border border-gray-300 text-gray-700 hover:bg-gray-50
+           px-8 py-3 rounded-full font-normal
            transition-all duration-200 ease-out
+           shadow-sm hover:shadow-md hover:scale-[1.02]
            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2
            active:scale-95;
   }
 
   .btn-ghost {
-    @apply bg-transparent text-foreground hover:bg-accent hover:text-accent-foreground
-           px-6 py-3 rounded-lg font-medium
+    @apply text-muted-foreground hover:text-foreground hover:bg-gray-50
+           px-6 py-2 rounded-full font-normal
            transition-all duration-200 ease-out
            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2
            active:scale-95;
   }
 
   .btn-accent {
-    @apply bg-gradient-accent text-accent-foreground hover:shadow-lg
-           px-6 py-3 rounded-lg font-medium
+    @apply bg-gradient-to-b from-accent to-accent/90 text-accent-foreground
+           px-8 py-3 rounded-full font-normal
            transition-all duration-200 ease-out
-           shadow-sm hover:scale-105
+           shadow-sm hover:shadow-lg hover:scale-[1.02]
            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2
            active:scale-95;
   }
 
-  /* Enterprise Card System */
+  /* Apple-inspired Card System - Glass morphism */
   .card-primary {
-    @apply bg-card border border-border rounded-xl p-8
+    @apply bg-white/80 backdrop-blur-xl border border-gray-200/50 rounded-2xl p-8
            shadow-sm hover:shadow-md
-           transition-all duration-200 ease-out
-           backdrop-blur-sm;
+           transition-all duration-300 ease-out;
   }
 
   .card-elevated {
-    @apply bg-card border border-border rounded-xl p-8
-           shadow-lg hover:shadow-xl
-           transition-all duration-200 ease-out
-           backdrop-blur-sm;
+    @apply bg-white/90 backdrop-blur-xl border border-gray-200/30 rounded-2xl p-8
+           shadow-lg hover:shadow-xl hover:scale-[1.01]
+           transition-all duration-300 ease-out;
   }
 
   .card-interactive {
-    @apply bg-card border border-border rounded-xl p-8
-           shadow-sm hover:shadow-lg hover:border-primary/20
-           transition-all duration-200 ease-out
-           cursor-pointer
-           backdrop-blur-sm;
+    @apply bg-white/60 backdrop-blur-xl border border-gray-200/30 rounded-2xl p-8
+           shadow-sm hover:shadow-lg hover:border-accent/40 hover:bg-white/80
+           transition-all duration-300 ease-out
+           cursor-pointer;
   }
 
   .card-feature {
-    @apply bg-card border border-border rounded-xl p-8
-           shadow-sm hover:shadow-md hover:scale-105
-           transition-all duration-300 ease-out
-           backdrop-blur-sm;
+    @apply bg-white/60 backdrop-blur-xl border border-gray-200/30 rounded-2xl p-10
+           shadow-sm hover:shadow-lg hover:bg-white/80 hover:border-accent/40
+           transition-all duration-300 ease-out hover:scale-[1.01];
   }
 
   /* Enterprise Layout System */

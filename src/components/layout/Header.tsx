@@ -16,26 +16,26 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-28 items-center justify-between px-6">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-200/50 bg-white/80 backdrop-blur-xl">
+      <div className="container flex h-20 items-center justify-between px-6">
         {/* Logo */}
         <NavLink to="/" className="flex items-center space-x-2">
           <img 
             src="/bravura-logo.png" 
             alt="Bravura A Data Works Company Logo" 
-            className="h-28 w-auto"
+            className="h-16 w-auto"
           />
         </NavLink>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-10">
           {navLinks.map((link) => (
             <NavLink
               key={link.name}
               to={link.href}
               className={({ isActive }) =>
-                `text-sm font-medium transition-colors hover:text-accent relative ${
-                  isActive ? "text-accent" : "text-muted-foreground"
+                `text-sm font-light transition-all duration-200 hover:text-foreground relative ${
+                  isActive ? "text-foreground" : "text-gray-500"
                 } ${isActive ? "after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-accent after:rounded-full" : ""}`
               }
             >
@@ -46,7 +46,7 @@ const Header = () => {
 
         {/* CTA Button */}
         <div className="hidden md:flex items-center space-x-4">
-          <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
+          <Button asChild className="btn-accent">
             <NavLink to="/contact">Get Started</NavLink>
           </Button>
         </div>
