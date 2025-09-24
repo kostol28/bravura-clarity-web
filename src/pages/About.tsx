@@ -246,9 +246,9 @@ const About = () => {
         <div className="container-enterprise">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="metric-card text-center">
-              <div className="metric-value">500+</div>
-              <div className="metric-label mb-3">Enterprise Clients</div>
-              <p className="text-sm text-muted-foreground">Across 40+ countries</p>
+              <div className="metric-value">50+</div>
+              <div className="metric-label mb-3">Happy Clients</div>
+              <p className="text-sm text-muted-foreground">Growing businesses served</p>
             </div>
             <div className="metric-card text-center">
               <div className="metric-value">98%</div>

@@ -61,9 +61,9 @@ const Contact = () => {
 
   const benefits = [
     { icon: CheckCircle, text: "Free 60-minute strategy consultation" },
-    { icon: Shield, text: "Enterprise-grade security & compliance" },
-    { icon: Award, text: "Proven ROI with 500+ successful projects" },
-    { icon: Users, text: "Dedicated account management team" }
+    { icon: Shield, text: "Professional security & compliance" },
+    { icon: Award, text: "Proven ROI with successful projects" },
+    { icon: Users, text: "Personal attention and dedicated support" }
   ];
 
   const faqs = [
@@ -77,7 +77,7 @@ const Contact = () => {
     },
     {
       question: "What industries do you serve?",
-      answer: "We serve Fortune 500 companies across financial services, healthcare, manufacturing, retail, technology, and government sectors with specialized regulatory expertise."
+      answer: "We work with businesses across financial services, healthcare, manufacturing, retail, technology, and other sectors, providing tailored data solutions for each industry's unique needs."
     },
     {
       question: "How do you ensure data security?",

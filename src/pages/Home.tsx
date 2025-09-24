@@ -38,10 +38,10 @@ const Home = () => {
   ];
 
   const metrics = [
-    { value: "500+", label: "Enterprise Clients", description: "Trusted by Fortune 500 companies" },
-    { value: "99.9%", label: "System Uptime", description: "Enterprise-grade reliability" },
-    { value: "10PB+", label: "Data Processed", description: "Petabytes of data analyzed daily" },
-    { value: "24/7", label: "Expert Support", description: "Round-the-clock technical assistance" }
+    { value: "50+", label: "Happy Clients", description: "Growing businesses we've helped" },
+    { value: "99%", label: "Client Satisfaction", description: "Reliable data solutions" },
+    { value: "5TB+", label: "Data Processed", description: "Terabytes of insights delivered" },
+    { value: "Fast", label: "Response Time", description: "Quick support when you need it" }
   ];
 
   const trustSignals = [
@@ -156,7 +156,7 @@ const Home = () => {
               Trusted Across Industries
             </h2>
             <p className="text-body-large text-muted-foreground max-w-3xl mx-auto">
-              From Fortune 500 enterprises to innovative startups, organizations worldwide 
+              From growing businesses to innovative startups, organizations 
               rely on our expertise to unlock the power of their data.
             </p>
           </div>
