@@ -7,28 +7,22 @@ import { Users, Target, Award, ArrowRight, CheckCircle } from "lucide-react";
 const About = () => {
   const leadership = [
     {
-      name: "Dr. Sarah Chen",
-      role: "Chief Executive Officer",
-      bio: "Former VP of Data Science at Google Cloud. PhD in Computer Science from Stanford. 15+ years leading enterprise data initiatives.",
-      expertise: ["Strategic Leadership", "Enterprise Architecture", "Data Governance"],
+      name: "Sarah Chen",
+      role: "Founder & CEO",
+      bio: "Former Data Analyst at a Fortune 500 tech company. Computer Science degree from UC Berkeley with a passion for making data accessible to growing businesses.",
+      expertise: ["Data Strategy", "Business Intelligence", "Team Leadership"],
     },
     {
       name: "Marcus Rodriguez",
-      role: "Chief Technology Officer", 
-      bio: "Ex-IBM Watson architect. MIT graduate with expertise in AI/ML infrastructure and scalable data systems.",
-      expertise: ["Machine Learning", "Cloud Architecture", "AI Strategy"],
+      role: "Co-founder & CTO", 
+      bio: "Software engineer with 5 years experience building scalable data pipelines. Graduated from MIT with expertise in machine learning applications.",
+      expertise: ["Machine Learning", "Software Development", "Data Engineering"],
     },
     {
-      name: "Dr. Jennifer Park",
-      role: "Head of Data Science",
-      bio: "Former Principal Data Scientist at Microsoft. Published researcher with 50+ papers in machine learning and analytics.",
-      expertise: ["Advanced Analytics", "Statistical Modeling", "Research & Development"],
-    },
-    {
-      name: "David Thompson",
-      role: "VP of Client Success",
-      bio: "20+ years in enterprise consulting. Former Deloitte partner specializing in data transformation initiatives.",
-      expertise: ["Client Strategy", "Digital Transformation", "Change Management"],
+      name: "Jennifer Park",
+      role: "Lead Data Scientist",
+      bio: "PhD in Statistics from Stanford. Former research intern at Google. Specializes in turning complex data into actionable business insights.",
+      expertise: ["Statistical Analysis", "Predictive Modeling", "Data Visualization"],
     },
   ];
 
@@ -51,19 +45,19 @@ const About = () => {
   ];
 
   const certifications = [
-    "AWS Advanced Consulting Partner",
-    "Google Cloud Premier Partner", 
-    "Microsoft Gold Partner",
-    "Snowflake Elite Partner",
-    "SOC 2 Type II Certified",
-    "ISO 27001 Compliant"
+    "AWS Partner Network Member",
+    "Google Cloud Partner", 
+    "Microsoft Partner Network",
+    "Snowflake Partner",
+    "SOC 2 Type II Compliant",
+    "GDPR Compliant"
   ];
 
   const achievements = [
-    "Named to Gartner's Cool Vendors in Analytics 2023",
-    "Forrester Leader in Data Services 2022-2023", 
-    "Inc. 5000 Fastest Growing Companies",
-    "Best Places to Work in Tech 2023"
+    "Y Combinator Alumni 2022",
+    "Best New Startup - Local Tech Awards 2023", 
+    "Top 10 Data Startups to Watch",
+    "Featured in TechCrunch Startup Spotlight"
   ];
 
   return (
@@ -80,9 +74,9 @@ const About = () => {
             </h1>
             
             <p className="text-body-large text-muted-foreground max-w-4xl mx-auto">
-              Founded by former executives from Google, IBM, and Microsoft, Bravura combines deep technical 
-              expertise with enterprise-grade execution. We've helped over 500 companies transform their 
-              data capabilities and achieve measurable business outcomes.
+              Founded in 2022 by data enthusiasts with experience at top tech companies, Bravura started 
+              as a mission to help growing businesses harness the power of their data. We've helped over 
+              50 companies transform their data capabilities and make smarter decisions.
             </p>
           </div>
         </div>
@@ -99,9 +93,9 @@ const About = () => {
                 </div>
                 <h2 className="text-title">Our Mission</h2>
                 <p className="text-body text-muted-foreground">
-                  To democratize enterprise-grade data analytics by making sophisticated AI and machine learning 
-                  accessible to organizations of all sizes. We believe every business deserves world-class data 
-                  capabilities to compete in the digital economy.
+                  To help growing businesses unlock the power of their data through accessible, practical 
+                  analytics solutions. We believe every company, regardless of size, deserves smart data 
+                  insights to make better decisions and compete effectively.
                 </p>
               </CardContent>
             </Card>
@@ -113,9 +107,9 @@ const About = () => {
                 </div>
                 <h2 className="text-title">Our Vision</h2>
                 <p className="text-body text-muted-foreground">
-                  To be the trusted strategic partner for data transformation initiatives worldwide. We envision 
-                  a future where data-driven decision making is the foundation of every successful organization, 
-                  powered by ethical AI and responsible innovation.
+                  To become the go-to data partner for growing businesses, helping them make data-driven 
+                  decisions that fuel sustainable growth. We envision a future where small and medium 
+                  businesses have the same data advantages as large corporations.
                 </p>
               </CardContent>
             </Card>
@@ -256,9 +250,9 @@ const About = () => {
               <p className="text-sm text-muted-foreground">Net Promoter Score: 72</p>
             </div>
             <div className="metric-card text-center">
-              <div className="metric-value">150+</div>
-              <div className="metric-label mb-3">Data Experts</div>
-              <p className="text-sm text-muted-foreground">PhD and Masters level</p>
+              <div className="metric-value">12</div>
+              <div className="metric-label mb-3">Team Members</div>
+              <p className="text-sm text-muted-foreground">Passionate data experts</p>
             </div>
             <div className="metric-card text-center">
               <div className="metric-value">5</div>
