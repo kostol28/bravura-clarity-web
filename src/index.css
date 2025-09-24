@@ -40,10 +40,10 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    /* Brand Gold System - Using Buff */
-    --gold: 29 59% 60%;
-    --gold-hover: 29 59% 55%;
-    --gold-light: 29 59% 70%;
+    /* Brand Gold System - Updated */
+    --gold: 38 63% 52%;
+    --gold-hover: 38 63% 47%;
+    --gold-light: 38 63% 62%;
     
     /* Design Tokens */
     --radius: 8px;
@@ -137,9 +137,9 @@
     --destructive-foreground: 0 0% 98%;
     
     /* Brand Gold System - Dark */
-    --gold: 29 59% 60%;
-    --gold-hover: 29 59% 70%;
-    --gold-light: 29 59% 75%;
+    --gold: 38 63% 52%;
+    --gold-hover: 38 63% 62%;
+    --gold-light: 38 63% 67%;
 
     /* Sidebar System - Dark */
     --sidebar-background: 200 71% 16%;
